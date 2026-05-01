@@ -5,9 +5,9 @@ from io import BytesIO
 import numpy as np
 import streamlit as st
 from PIL import Image
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Flatten, Dropout, Dense, BatchNormalization
-from tensorflow.keras.optimizers import Adam
+from keras.models import Sequential, load_model as keras_load_model
+from keras.layers import Input, Conv2D, MaxPooling2D, Flatten, Dropout, Dense, BatchNormalization
+from keras.optimizers import Adam
 
 st.set_page_config(
     page_title="Emotion Recognition UI",
@@ -531,7 +531,7 @@ body::after {
 st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 
 @st.cache_resource
-def load_model():
+def load_model_weights():
     model = Sequential([
         Input(shape=(IMG_SIZE, IMG_SIZE, 1)),
         Conv2D(22, kernel_size=(3, 3), activation="relu", padding="same"),
@@ -688,7 +688,7 @@ if uploaded_file is None:
 else:
     if predict_button:
         try:
-            model = load_model()
+            model = load_model_weights()
             image_preview, image_array = preprocess_image(uploaded_file)
             with st.spinner("Predicting emotion..."):
                 prediction = model.predict(image_array, verbose=0)[0]
