@@ -5,9 +5,9 @@ from io import BytesIO
 import numpy as np
 import streamlit as st
 from PIL import Image
-from tensorflow.keras.models import Sequential, load_model as keras_load_model
-from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Flatten, Dropout, Dense, BatchNormalization
-from tensorflow.keras.optimizers import Adam
+from tf_keras.models import Sequential, load_model as keras_load_model
+from tf_keras.layers import Input, Conv2D, MaxPooling2D, Flatten, Dropout, Dense, BatchNormalization
+from tf_keras.optimizers import Adam
 
 st.set_page_config(
     page_title="Emotion Recognition UI",
