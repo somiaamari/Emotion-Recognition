@@ -5,8 +5,7 @@
 
 
 
-<!-- PROJECT SHIELDS -->
-![Contributors][contributors-badge]
+
 
 **CNN model for classifying facial emotions into seven categories using Keras**
 
@@ -34,7 +33,6 @@ A deep learning model for facial emotion classification. This Keras-based projec
     </li>
     <li><a href="#run">Run</a></li>
     <li><a href="#data">Data</a></li>
-    <li><a href="#contributors">Contributors</a></li>
   </ol>
 </details>
 
@@ -77,26 +75,5 @@ This dataset is a modified version of the Emotion Detection dataset found on [Ka
 
 
 
-<!-- CONTRIBUTION -->
-## Contributors
-
-- Andrei Harbachov ([Github][andrei-github] · [LinkedIn][andrei-linkedin])
-- Shane Eastwood ([Github][shane-github] · [LinkedIn][shane-linkedin])
 
 
-
-<!-- MARKDOWN LINKS -->
-<!-- Badges and their links -->
-[contributors-badge]: https://img.shields.io/badge/Contributors-2-44cc11?style=for-the-badge
-[keras-badge]: https://img.shields.io/badge/keras-d10000?style=for-the-badge&logo=keras&logoColor=ffffff
-[keras]: https://keras.io/
-[numpy-badge]: https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=ffffff
-[numpy]: https://numpy.org/
-[sklearn-badge]: https://img.shields.io/badge/sklearn-f89a36?style=for-the-badge&logo=scikitlearn&logoColor=ffffff
-[sklearn]: https://scikit-learn.org/stable/
-
-<!-- Socials -->
-[andrei-linkedin]: https://www.linkedin.com/in/andreihar/
-[andrei-github]: https://github.com/andreihar
-[shane-linkedin]: https://www.linkedin.com/in/shane-eastwood-3549479b/
-[shane-github]: https://github.com/sjeastwood
