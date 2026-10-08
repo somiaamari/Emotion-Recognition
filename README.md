@@ -26,6 +26,7 @@
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#dataset">Dataset</a></li>
     <li><a href="#run-locally">Run Locally</a></li>
+    <li><a href="#deploy-to-streamlit-community-cloud">Deploy to Streamlit Community Cloud</a></li>
     <li><a href="#contributors">Contributors</a></li>
   </ol>
 </details>
@@ -136,8 +137,8 @@ The model was trained on a modified version of the **FER (Facial Emotion Recogni
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-repo/emotion-recognition.git
-cd emotion-recognition
+git clone https://github.com/somiaamari/Emotion-Recognition.git
+cd Emotion-Recognition
 ```
 
 ### 2. Install dependencies
@@ -159,6 +160,28 @@ jupyter notebook emotion_recognition.ipynb
 ```
 
 > ✅ The pre-trained weights (`model_weights.h5`) are included — no retraining required!
+
+---
+
+## ☁️ Deploy to Streamlit Community Cloud
+
+The app entry point is `app.py`. Streamlit Community Cloud installs the pinned
+dependencies from `requirements.txt`; `runtime.txt` selects Python 3.11. The
+pre-trained `model_weights.h5` file must remain in the repository root because
+the app loads it when the first prediction is requested.
+
+1. Push this repository to GitHub, including `app.py`, `requirements.txt`,
+   `runtime.txt`, and `model_weights.h5`.
+2. Sign in to [Streamlit Community Cloud](https://share.streamlit.io/) and
+   choose **Create app**.
+3. Select this repository and the branch to deploy, then set the main file path
+   to `app.py`.
+4. In **Advanced settings**, select Python 3.11 if a runtime version is
+   requested, then deploy.
+
+No Streamlit secrets or external services are required. To run the same pinned
+environment locally, install `requirements.txt` using Python 3.11 before
+running `streamlit run app.py`.
 
 ---
 

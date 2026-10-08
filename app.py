@@ -1,11 +1,10 @@
 import os
 import base64
-from io import BytesIO
 
 import numpy as np
 import streamlit as st
 from PIL import Image
-from tf_keras.models import Sequential, load_model as keras_load_model
+from tf_keras.models import Sequential
 from tf_keras.layers import Input, Conv2D, MaxPooling2D, Flatten, Dropout, Dense, BatchNormalization
 from tf_keras.optimizers import Adam
 
@@ -689,7 +688,7 @@ else:
     if predict_button:
         try:
             model = load_model_weights()
-            image_preview, image_array = preprocess_image(uploaded_file)
+            _, image_array = preprocess_image(uploaded_file)
             with st.spinner("Predicting emotion..."):
                 prediction = model.predict(image_array, verbose=0)[0]
             predicted_idx = int(np.argmax(prediction))
