@@ -15,6 +15,9 @@
 
 </div>
 
+**Live demo:** [emotion-recognition](https://emotion-recognition-rjved69w6yga8ysyxqp7b7.streamlit.app/)
+
+
 ---
 
 <details open>
